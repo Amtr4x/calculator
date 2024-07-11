@@ -1,6 +1,7 @@
 let firstNumber = 0;
 let secondNumber = 0;
 let operator = "";
+const buttons = document.querySelector(".calculator__buttons");
 
 /**
  * Perform the requested operation based in the provided operator.
@@ -26,7 +27,6 @@ function operate(x, op, y) {
             result = divide(x, y);
             break;
         default:
-            result = "Invalid Operator";
             break;
     }
 
@@ -48,3 +48,52 @@ function multiply(x, y) {
 function divide(x, y) {
     return Math.floor(x / y) / 10;
 }
+
+// *********************** User Input ******************************
+
+/**
+ * Capture the user input via Mouse and Keyboard.
+ */
+function getUserInput() {
+    getMouseInput();
+    getKeyboardInput();
+}
+
+/**
+ * Capture the user input via Mouse.
+ */
+function getMouseInput() {
+    buttons.addEventListener("click", (btn) => {
+        return btn.target.value;
+    });
+}
+
+function getKeyboardInput() {
+    const ALLOWED_KEYS = [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "0",
+        "/",
+        "*",
+        "+",
+        "-",
+        ".",
+        "=",
+        "Backspace",
+        "Enter",
+    ];
+    addEventListener("keyup", (btn) => {
+        if (ALLOWED_KEYS.includes(btn.key.toString())) {
+            return btn.key.toString().toLocaleLowerCase();
+        }
+    });
+}
+
+getUserInput();
