@@ -15,6 +15,11 @@ function operate(x, op, y) {
     let result = 0;
 
     switch (op) {
+        case "remainder":
+            if (y !== 0) {
+                result = remainder(x, y);
+            }
+            break;
         case "+":
             result = add(x, y);
             break;
@@ -50,6 +55,10 @@ function multiply(x, y) {
 
 function divide(x, y) {
     return (x / y).toFixed(1);
+}
+
+function remainder(x, y) {
+    return x % y;
 }
 
 // *********************** User Input ******************************
