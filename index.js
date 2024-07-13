@@ -52,7 +52,8 @@ function divide(x, y) {
 // *********************** User Input ******************************
 
 /**
- * Capture the user input via Mouse and Keyboard.
+ * Capture the user input via Mouse and Keyboard and manage the Input,
+ * operations and display info.
  */
 function manageUserInput() {
     getMouseInput();
