@@ -56,16 +56,23 @@ function divide(x, y) {
  * operations and display info.
  */
 function manageUserInput() {
-    getMouseInput();
+    const displayText = document.querySelector(".calculator__display-text");
+    getMouseInput(displayText);
     getKeyboardInput();
 }
 
 /**
  * Capture the user input via Mouse.
  */
-function getMouseInput() {
+function getMouseInput(displayText) {
     buttons.addEventListener("click", (btn) => {
-        return btn.target.value;
+        newText = displayText.textContent;
+        const btnPressed = btn.target.value;
+
+        manageCharacters(btnPressed);
+        manageDisplay(btnPressed);
+        triggerOperation(btnPressed);
+        displayText.textContent = newText;
     });
 }
 
