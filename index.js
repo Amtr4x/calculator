@@ -124,4 +124,23 @@ function manageCharacters(inputChar) {
     }
 }
 
+/**
+ * Wait until the pressed button be the equality operator and exists an
+ * operator in the values to perform the desired operation.
+ *
+ * @param {char} trigger Btn value of the button pressed.
+ * */
+function triggerOperation(triggerBtn) {
+    if (triggerBtn === "=" && operator) {
+        firstNumber = operate(
+            Number(firstNumber),
+            operator,
+            Number(secondNumber)
+        );
+        operator = null;
+        secondNumber = "";
+        newText = firstNumber;
+    }
+}
+
 manageUserInput();
