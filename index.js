@@ -46,7 +46,7 @@ function multiply(x, y) {
 }
 
 function divide(x, y) {
-    return Math.floor(x / y) / 10;
+    return (x / y).toFixed(1);
 }
 
 // *********************** User Input ******************************
