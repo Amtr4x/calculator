@@ -21,7 +21,7 @@ function operate(x, op, y) {
             result = subtract(x, y);
             break;
         case "*":
-            result = subtract(x, y);
+            result = multiply(x, y);
             break;
         case "/":
             result = divide(x, y);
