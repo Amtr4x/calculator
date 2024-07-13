@@ -104,4 +104,24 @@ function getKeyboardInput() {
     });
 }
 
+/**
+ * Manage the characters introduced and allocate it inside the correct
+ * variable in order to fill the firstNumber and then secondNumber variable.
+ *
+ * @param {char} inputChar value of the button when is pressed.
+ */
+function manageCharacters(inputChar) {
+    if (!operator) {
+        if (inputChar.match(/[0-9]/)) {
+            firstNumber += inputChar;
+        } else {
+            operator = inputChar;
+        }
+    } else {
+        if (inputChar.match(/[0-9]/)) {
+            secondNumber += inputChar;
+        }
+    }
+}
+
 manageUserInput();
