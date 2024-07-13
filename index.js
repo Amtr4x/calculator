@@ -1,6 +1,7 @@
 let firstNumber = "";
 let secondNumber = "";
 let operator;
+let newText;
 const buttons = document.querySelector(".calculator__buttons");
 
 /**
@@ -140,6 +141,26 @@ function triggerOperation(triggerBtn) {
         operator = null;
         secondNumber = "";
         newText = firstNumber;
+    }
+}
+
+// ************************** Update Display ********************************
+
+/**
+ * Clean the display with a zero when an operator is pressed and
+ * put the most recent value in the display.
+ *
+ * @param {char} triggerBtn value of the pressed button
+ */
+function manageDisplay(triggerBtn) {
+    if (newText === "Welcome!" || (operator && newText === "0")) {
+        newText = "";
+    }
+
+    if (!triggerBtn.match(/[0-9]/)) {
+        newText = "0";
+    } else {
+        newText += triggerBtn;
     }
 }
 
