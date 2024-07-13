@@ -54,7 +54,7 @@ function divide(x, y) {
 /**
  * Capture the user input via Mouse and Keyboard.
  */
-function getUserInput() {
+function manageUserInput() {
     getMouseInput();
     getKeyboardInput();
 }
@@ -96,4 +96,4 @@ function getKeyboardInput() {
     });
 }
 
-getUserInput();
+manageUserInput();
