@@ -158,6 +158,11 @@ function triggerOperation(triggerBtn) {
     }
 }
 
+/**
+ * Clean all data from the calculator returning to zero values.
+ *
+ * @param {char} triggerBtn value of the button pressed
+ */
 function clearData(triggerBtn) {
     if (triggerBtn === "AC") {
         firstNumber = "";
