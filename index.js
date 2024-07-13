@@ -128,10 +128,13 @@ function manageCharacters(inputChar) {
             firstNumber += inputChar;
         } else {
             operator = inputChar;
+            clearData(inputChar);
         }
     } else {
         if (inputChar.match(/[0-9]/)) {
             secondNumber += inputChar;
+        } else {
+            clearData(inputChar);
         }
     }
 }
@@ -152,6 +155,14 @@ function triggerOperation(triggerBtn) {
         operator = null;
         secondNumber = "";
         newText = firstNumber;
+    }
+}
+
+function clearData(triggerBtn) {
+    if (triggerBtn === "AC") {
+        firstNumber = "";
+        secondNumber = "";
+        operator = null;
     }
 }
 
