@@ -25,7 +25,9 @@ function operate(x, op, y) {
             result = multiply(x, y);
             break;
         case "/":
-            result = divide(x, y);
+            if (y !== 0) {
+                result = divide(x, y);
+            }
             break;
         default:
             break;
