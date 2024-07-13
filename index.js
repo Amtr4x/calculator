@@ -1,6 +1,6 @@
-let firstNumber = 0;
-let secondNumber = 0;
-let operator = "";
+let firstNumber = "";
+let secondNumber = "";
+let operator;
 const buttons = document.querySelector(".calculator__buttons");
 
 /**
