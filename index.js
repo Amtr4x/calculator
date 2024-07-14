@@ -128,12 +128,14 @@ function manageCharacters(inputChar) {
             firstNumber += inputChar;
         } else {
             operator = inputChar;
+            toggleNegation(inputChar);
             clearData(inputChar);
         }
     } else {
         if (inputChar.match(/[0-9]/)) {
             secondNumber += inputChar;
         } else {
+            toggleNegation(inputChar);
             clearData(inputChar);
         }
     }
@@ -168,6 +170,21 @@ function clearData(triggerBtn) {
         firstNumber = "";
         secondNumber = "";
         operator = null;
+    }
+}
+
+/**
+ * Converts a value to negative or vice versa.
+ *
+ * @param {char} triggerBtn value of the button pressed
+ */
+function toggleNegation(triggerBtn) {
+    if (triggerBtn === "convert") {
+        if (!secondNumber) {
+            firstNumber = String(Number(firstNumber) * -1);
+        } else {
+            secondNumber = String(Number(secondNumber) * -1);
+        }
     }
 }
 
