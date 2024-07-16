@@ -4,18 +4,20 @@ let mutator = "";
 let operator = "";
 
 function manageMouseInput() {
-    buttons?.addEventListener("click", (btn) => {
+    buttons.addEventListener("click", (btn) => {
         const btnPressed = btn.target.value;
         const inputType = inputTypeOf(btnPressed);
 
         if (inputType === "number") {
             storeValueFrom(btnPressed);
         } else if (inputType === "operator") {
-            if (accumulator.length > 0) {
+            if (accumulator.length > 0 && operator.length === 0) {
                 operator += btnPressed;
             }
         } else {
-            console.log("this is an special call, must perform an operation");
+            if (btn === "=" && accumulator && operator && operator) {
+                // TODO call operations
+            }
         }
     });
 }
