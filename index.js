@@ -11,7 +11,7 @@ function manageMouseInput() {
         if (inputType === "number") {
             storeValueFrom(btnPressed);
         } else if (inputType === "operator") {
-            if (accumulator.length > 0 && operator.length === 0) {
+            if (accumulator && !operator) {
                 operator += btnPressed;
             }
         } else {
@@ -33,7 +33,7 @@ function inputTypeOf(x) {
 }
 
 function storeValueFrom(x) {
-    if (operator.length === 0) {
+    if (!operator) {
         accumulator += x;
     } else {
         mutator += x;
