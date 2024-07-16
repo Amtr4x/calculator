@@ -19,11 +19,45 @@ function manageMouseInput() {
                 // TODO call required operation, then store the result in accumulator, clean mutator, store the new operator and fill mutator
             }
         } else {
-            if (btn === "=" && requirementsAreReady) {
-                // TODO call operations
+            switch (btnPressed) {
+                case "convert":
+                    toggleNegation(shouldEditAccumulator());
+                    break;
+                case "AC":
+                    // TODO remove all values
+                    break;
+                case ".":
+                    // TODO insert decimal point
+                    break;
+                case "=": {
+                    if (requirementsAreReady) {
+                        // TODO call operations
+                    }
+                    break;
+                }
             }
         }
     });
+}
+
+function shouldEditAccumulator() {
+    if (mutator) {
+        return false;
+    } else {
+        return true;
+    }
+}
+
+function toggleNegation(shouldEditAccumulator) {
+    if (shouldEditAccumulator) {
+        if (accumulator) {
+            accumulator = String(Number(accumulator) * -1);
+        }
+    } else {
+        if (mutator) {
+            mutator = String(Number(mutator) * -1);
+        }
+    }
 }
 
 function inputTypeOf(x) {
