@@ -16,7 +16,7 @@ function manageMouseInput() {
       if (accumulator && !operator) {
         operator += btnPressed;
       } else if (requirementsAreReady &&
-            !(accumulator.endsWith(".") || mutator.endsWith("."))) {
+        !(accumulator.endsWith(".") || mutator.endsWith("."))) {
         // TODO call required operation, then store the result in accumulator, clean mutator, store the new operator and fill mutator
       }
     } else {
@@ -113,7 +113,11 @@ function multiply(x, y) {
 }
 
 function divide(x, y) {
-  return String((Number(x) / Number(y)).toFixed(1));
+  if (y != "0") {
+    return String((Number(x) / Number(y)).toFixed(1));
+  } else {
+    return "0";
+  }
 }
 
 function remainder(x, y) {
