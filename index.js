@@ -27,10 +27,11 @@ function manageMouseInput() {
           // TODO remove all values
           break;
         case ".":
-          // TODO insert decimal point
+          assignDecimalPoint();
           break;
         case "=": {
-          if (requirementsAreReady) {
+          if (requirementsAreReady &&
+            !(accumulator.endsWith(".") || mutator.endsWith("."))) {
             // TODO call operations
           }
           break;
@@ -75,6 +76,18 @@ function storeValueFrom(x) {
     accumulator += x;
   } else {
     mutator += x;
+  }
+}
+
+function assignDecimalPoint() {
+  if (shouldEditAccumulator()) {
+    if (accumulator && !accumulator.includes(".")) {
+      accumulator += ".";
+    }
+  } else {
+    if (mutator && !mutator.includes(".")) {
+      mutator += ".";
+    }
   }
 }
 
