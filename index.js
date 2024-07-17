@@ -18,6 +18,8 @@ function manageMouseInput() {
       } else if (requirementsAreReady &&
         !(accumulator.endsWith(".") || mutator.endsWith("."))) {
         // TODO call required operation, then store the result in accumulator, clean mutator, store the new operator and fill mutator
+        operate();
+        operator += btnPressed;
       }
     } else {
       switch (btnPressed) {
@@ -33,7 +35,7 @@ function manageMouseInput() {
         case "=": {
           if (requirementsAreReady &&
             !(accumulator.endsWith(".") || mutator.endsWith("."))) {
-            // TODO call operations
+            operate();
           }
           break;
         }
@@ -122,6 +124,29 @@ function divide(x, y) {
 
 function remainder(x, y) {
   return String(Number(x) % Number(y));
+}
+
+function operate(){
+  switch(operator) {
+    case "+":
+      accumulator = add(accumulator, mutator);
+      break;
+    case "-":
+      accumulator = subtract(accumulator, mutator);
+      break;
+    case "*":
+      accumulator = multiply(accumulator, mutator);
+      break;
+    case "/":
+      accumulator = divide(accumulator, mutator);
+      break;
+    case "remainder":
+      accumulator = remainder(accumulator, mutator);
+      break;
+  }
+
+  mutator = "";
+  operator = "";
 }
 
 manageMouseInput();
