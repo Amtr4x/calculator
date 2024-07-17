@@ -99,4 +99,24 @@ function deleteAllStoredData() {
   }
 }
 
+function add(x, y) {
+  return String(Number(x) + Number(y));
+}
+
+function subtract(x, y) {
+  return String(Number(x) - Number(y));
+}
+
+function multiply(x, y) {
+  return String(Number(x) * Number(y));
+}
+
+function divide(x, y) {
+  return String((Number(x) / Number(y)).toFixed(1));
+}
+
+function remainder(x, y) {
+  return String(Number(x) % Number(y));
+}
+
 manageMouseInput();
