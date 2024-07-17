@@ -15,7 +15,8 @@ function manageMouseInput() {
     } else if (inputType === "operator") {
       if (accumulator && !operator) {
         operator += btnPressed;
-      } else if (requirementsAreReady) {
+      } else if (requirementsAreReady &&
+            !(accumulator.endsWith(".") || mutator.endsWith("."))) {
         // TODO call required operation, then store the result in accumulator, clean mutator, store the new operator and fill mutator
       }
     } else {
