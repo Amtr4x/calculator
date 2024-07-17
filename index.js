@@ -24,7 +24,7 @@ function manageMouseInput() {
           toggleNegation(shouldEditAccumulator());
           break;
         case "AC":
-          // TODO remove all values
+          deleteAllStoredData();
           break;
         case ".":
           assignDecimalPoint();
@@ -88,6 +88,14 @@ function assignDecimalPoint() {
     if (mutator && !mutator.includes(".")) {
       mutator += ".";
     }
+  }
+}
+
+function deleteAllStoredData() {
+  if (accumulator || mutator || operator) {
+    accumulator = "";
+    mutator = "";
+    operator = "";
   }
 }
 
