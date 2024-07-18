@@ -158,6 +158,8 @@ function updateDisplay() {
     display.textContent = mutator;
   } else if (accumulator) {
     display.textContent = accumulator;
+  } else {
+    display.textContent = "0"
   }
 }
 
