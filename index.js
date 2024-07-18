@@ -17,7 +17,6 @@ function manageMouseInput() {
         operator += btnPressed;
       } else if (requirementsAreReady &&
         !(accumulator.endsWith(".") || mutator.endsWith("."))) {
-        // TODO call required operation, then store the result in accumulator, clean mutator, store the new operator and fill mutator
         operate();
         operator += btnPressed;
       }
@@ -126,8 +125,8 @@ function remainder(x, y) {
   return String(Number(x) % Number(y));
 }
 
-function operate(){
-  switch(operator) {
+function operate() {
+  switch (operator) {
     case "+":
       accumulator = add(accumulator, mutator);
       break;
