@@ -40,6 +40,7 @@ function manageMouseInput() {
         }
       }
     }
+    updateDisplay();
   });
 }
 
@@ -147,5 +148,18 @@ function operate() {
   mutator = "";
   operator = "";
 }
+
+function updateDisplay() {
+  const display = document.querySelector(".calculator__display-text");
+
+  if (operator && !mutator) {
+    display.textContent = "0";
+  } else if (mutator) {
+    display.textContent = mutator;
+  } else if (accumulator) {
+    display.textContent = accumulator;
+  }
+}
+
 
 manageMouseInput();

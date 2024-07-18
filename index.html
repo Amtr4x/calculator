@@ -1,153 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap"
-            rel="stylesheet"
-        />
-        <link rel="stylesheet" href="style.css" />
-        <script src="./index.js" defer></script>
-        <title>Calculator</title>
-    </head>
-    <body>
-        <div class="calculator">
-            <div class="calculator__display">
-                <p class="calculator__display-text">Welcome!</p>
-            </div>
-            <div class="calculator__buttons">
-                <div class="calculator__buttons_main">
-                    <div class="calculator__buttons_main-specials">
-                        <button
-                            class="calculator__buttons_main-specials__btn"
-                            value="AC"
-                        >
-                            AC
-                        </button>
-                        <button
-                            class="calculator__buttons_main-specials__btn"
-                            value="convert"
-                        >
-                            +/-
-                        </button>
-                        <button
-                            class="calculator__buttons_main-specials__btn"
-                            value="remainder"
-                        >
-                            %
-                        </button>
-                    </div>
-                    <div class="calculator__buttons_main-numbers">
-                        <button
-                            class="calculator__buttons_main-numbers__btn"
-                            value="7"
-                        >
-                            7
-                        </button>
-                        <button
-                            class="calculator__buttons_main-numbers__btn"
-                            value="8"
-                        >
-                            8
-                        </button>
-                        <button
-                            class="calculator__buttons_main-numbers__btn"
-                            value="9"
-                        >
-                            9
-                        </button>
-                    </div>
-                    <div class="calculator__buttons_main-numbers">
-                        <button
-                            class="calculator__buttons_main-numbers__btn"
-                            value="4"
-                        >
-                            4
-                        </button>
-                        <button
-                            class="calculator__buttons_main-numbers__btn"
-                            value="5"
-                        >
-                            5
-                        </button>
-                        <button
-                            class="calculator__buttons_main-numbers__btn"
-                            value="6"
-                        >
-                            6
-                        </button>
-                    </div>
-                    <div class="calculator__buttons_main-numbers">
-                        <button
-                            class="calculator__buttons_main-numbers__btn"
-                            value="1"
-                        >
-                            1
-                        </button>
-                        <button
-                            class="calculator__buttons_main-numbers__btn"
-                            value="2"
-                        >
-                            2
-                        </button>
-                        <button
-                            class="calculator__buttons_main-numbers__btn"
-                            value="3"
-                        >
-                            3
-                        </button>
-                    </div>
-                    <div class="calculator__buttons_main-numbers">
-                        <button
-                            class="calculator__buttons_main-numbers__btn zero"
-                            value="0"
-                        >
-                            0
-                        </button>
-                        <button
-                            class="calculator__buttons_main-numbers__btn"
-                            value="."
-                        >
-                            .
-                        </button>
-                    </div>
-                </div>
-                <div class="calculator__buttons_main-operators">
-                    <button
-                        class="calculator__buttons_main-operators_btn"
-                        value="/"
-                    >
-                        /
-                    </button>
-                    <button
-                        class="calculator__buttons_main-operators_btn"
-                        value="*"
-                    >
-                        *
-                    </button>
-                    <button
-                        class="calculator__buttons_main-operators_btn"
-                        value="-"
-                    >
-                        -
-                    </button>
-                    <button
-                        class="calculator__buttons_main-operators_btn"
-                        value="+"
-                    >
-                        +
-                    </button>
-                    <button
-                        class="calculator__buttons_main-operators_btn"
-                        value="="
-                    >
-                        =
-                    </button>
-                </div>
-            </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="./index.js" defer></script>
+  <title>Calculator</title>
+</head>
+
+<body>
+  <div class="calculator">
+    <div class="calculator__display">
+      <p class="calculator__display-text">Welcome!</p>
+    </div>
+    <div class="calculator__buttons">
+      <div class="calculator__buttons_main">
+        <div class="calculator__buttons_main-specials">
+          <button class="calculator__buttons_main-specials__btn" value="AC">
+            AC
+          </button>
+          <button class="calculator__buttons_main-specials__btn" value="convert">
+            +/-
+          </button>
+          <button class="calculator__buttons_main-specials__btn" value="remainder">
+            %
+          </button>
         </div>
-    </body>
+        <div class="calculator__buttons_main-numbers">
+          <button class="calculator__buttons_main-numbers__btn" value="7">
+            7
+          </button>
+          <button class="calculator__buttons_main-numbers__btn" value="8">
+            8
+          </button>
+          <button class="calculator__buttons_main-numbers__btn" value="9">
+            9
+          </button>
+        </div>
+        <div class="calculator__buttons_main-numbers">
+          <button class="calculator__buttons_main-numbers__btn" value="4">
+            4
+          </button>
+          <button class="calculator__buttons_main-numbers__btn" value="5">
+            5
+          </button>
+          <button class="calculator__buttons_main-numbers__btn" value="6">
+            6
+          </button>
+        </div>
+        <div class="calculator__buttons_main-numbers">
+          <button class="calculator__buttons_main-numbers__btn" value="1">
+            1
+          </button>
+          <button class="calculator__buttons_main-numbers__btn" value="2">
+            2
+          </button>
+          <button class="calculator__buttons_main-numbers__btn" value="3">
+            3
+          </button>
+        </div>
+        <div class="calculator__buttons_main-numbers">
+          <button class="calculator__buttons_main-numbers__btn zero" value="0">
+            0
+          </button>
+          <button class="calculator__buttons_main-numbers__btn" value=".">
+            .
+          </button>
+        </div>
+      </div>
+      <div class="calculator__buttons_main-operators">
+        <button class="calculator__buttons_main-operators_btn" value="/">
+          /
+        </button>
+        <button class="calculator__buttons_main-operators_btn" value="*">
+          *
+        </button>
+        <button class="calculator__buttons_main-operators_btn" value="-">
+          -
+        </button>
+        <button class="calculator__buttons_main-operators_btn" value="+">
+          +
+        </button>
+        <button class="calculator__buttons_main-operators_btn" value="=">
+          =
+        </button>
+      </div>
+    </div>
+  </div>
+</body>
+
 </html>
